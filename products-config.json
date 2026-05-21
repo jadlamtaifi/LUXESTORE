@@ -1,0 +1,44 @@
+{
+  "product1": {
+    "name": "Coussin de Voyage Gonflable",
+    "desc": "Dormez confortablement en avion, en train ou en voiture. Ce coussin gonflable enveloppe votre tête et vos bras pour un soutien complet — plus de réveils douloureux en route.",
+    "price": 99,
+    "oldPrice": 199,
+    "badge": "🔥 Best Seller"
+  },
+  "product2": {
+    "name": "Boîte de Rangement Pliable",
+    "desc": "Organisez votre espace avec style grâce à cette boîte de rangement élégante, résistante et parfaite pour toutes les pièces.",
+    "price": 89,
+    "oldPrice": 159,
+    "badge": "⚡ Tendance"
+  },
+  "product3": {
+    "name": "Rasoir Anti-Bouloches SONAR SN-229",
+    "desc": "Élimine rapidement les bouloches sur vêtements, couvertures et tissus. Recharge USB pratique et design compact ultra moderne.",
+    "price": 89,
+    "oldPrice": 450,
+    "badge": "🆕 Nouveau"
+  },
+  "product4": {
+    "name": "Lampe LED Coucher de Soleil",
+    "desc": "Ambiance virale TikTok. 16 couleurs, télécommande incluse. Transformez votre espace.",
+    "price": 189,
+    "oldPrice": 350,
+    "badge": "📸 Viral TikTok"
+  },
+  "product5": {
+    "name": "Mini Projecteur Portable",
+    "desc": "Full HD, WiFi intégré, batterie rechargeable. Cinéma partout avec vous.",
+    "price": 699,
+    "oldPrice": 1200,
+    "badge": "⭐ Premium"
+  },
+  "product6": {
+    "name": "Organisateur Bureau Magnétique",
+    "desc": "Design minimaliste, chargeur sans fil intégré. Setup desk parfait pour le contenu.",
+    "price": 229,
+    "oldPrice": 399,
+    "badge": "💼 Setup"
+  }
+}

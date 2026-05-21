@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détails du Produit — LUXESTORE</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Spécifique à la page produit */
+    .product-page { padding-top: calc(var(--nav-height) + 40px); padding-bottom: 80px; }
+    .product-container {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1200px; margin: 0 auto;
+    }
+    .product-gallery { position: sticky; top: calc(var(--nav-height) + 40px); }
+    .main-media-container {
+      border-radius: var(--radius-lg); overflow: hidden; background: #111;
+      height: 500px; position: relative; border: 1px solid var(--border-glass);
+      margin-bottom: 20px;
+    }
+    .main-media-container img, .main-media-container video {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .main-media-item { display: none; }
+    .main-media-item.active { display: block; }
+    .thumbnails { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 10px; }
+    .thumbnails::-webkit-scrollbar { height: 4px; }
+    .thumbnail {
+      width: 80px; height: 80px; border-radius: var(--radius-sm); cursor: pointer;
+      overflow: hidden; border: 2px solid transparent; opacity: 0.6; transition: all 0.3s;
+      flex-shrink: 0; background: #111;
+    }
+    .thumbnail.active, .thumbnail:hover { opacity: 1; border-color: var(--accent); }
+    .thumbnail img { width: 100%; height: 100%; object-fit: cover; }
+    
+    .product-details { padding-top: 20px; }
+    .pd-badge {
+      display: inline-block; padding: 6px 14px; border-radius: 50px; font-size: 0.75rem;
+      font-weight: 700; background: var(--accent-soft); color: var(--accent);
+      margin-bottom: 16px; border: 1px solid rgba(0,212,170,0.2);
+    }
+    .pd-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 12px; line-height: 1.1; }
+    .pd-reviews { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; font-size: 0.9rem; }
+    .pd-stars { color: #fbbf24; letter-spacing: 2px; }
+    .pd-price-row { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+    .pd-price { font-size: 2.5rem; font-weight: 900; background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .pd-old-price { font-size: 1.2rem; color: var(--text-muted); text-decoration: line-through; }
+    .pd-desc { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 40px; }
+    
+    .pd-features { margin-bottom: 40px; display: grid; gap: 16px; }
+    .pd-feature { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; }
+    .pd-feature-icon { width: 32px; height: 32px; border-radius: 50%; background: var(--bg-glass); display: flex; align-items: center; justify-content: center; color: var(--accent); }
+    
+    .pd-cta { width: 100%; font-size: 1.1rem; padding: 18px; margin-bottom: 20px; }
+    .pd-urgency { text-align: center; font-size: 0.85rem; color: #fbbf24; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .pd-urgency .dot { width: 8px; height: 8px; border-radius: 50%; background: #fbbf24; animation: pulse-yellow 2s infinite; }
+    
+    @keyframes pulse-yellow { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
+    
+    @media (max-width: 992px) {
+      .product-container { grid-template-columns: 1fr; }
+      .product-gallery { position: static; }
+      .main-media-container { height: 400px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">LUXE<span style="color:#00d4aa;">STORE</span></a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#products">Produits</a></li>
+        <li><a href="index.html#advantages">Avantages</a></li>
+        <li><a href="index.html#testimonials">Avis</a></li>
+      </ul>
+      <a href="index.html#products" class="nav-cta magnetic-btn">🛍️ Retour Boutique</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PRODUCT DETAILS ===== -->
+  <section class="product-page">
+    <div class="container product-container" id="productDetailsContainer">
+      <!-- Injected via JS -->
+      <div style="text-align: center; grid-column: 1/-1; padding: 100px 0;">
+        <h2>Chargement du produit...</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">LUXE<span style="color:#00d4aa;">STORE</span></a>
+          <p>Votre boutique premium au Maroc. Les meilleurs produits tendance livrés chez vous.</p>
+        </div>
+        <div class="footer-bottom" style="width: 100%; border-top: 1px solid var(--border-glass); margin-top: 20px; padding-top: 20px; text-align: center;">
+          © 2026 LUXESTORE. Tous droits réservés.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
