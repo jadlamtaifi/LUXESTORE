@@ -204,10 +204,10 @@ section { padding: 100px 0; position: relative; }
   box-shadow: var(--shadow-glow);
 }
 .product-media {
-  position: relative; height: 280px; overflow: hidden; background: #111;
+  position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: var(--bg-secondary);
 }
 .product-slide {
-  width: 100%; height: 100%; object-fit: cover;
+  width: 100%; height: 100%; object-fit: contain;
   transition: transform 0.6s var(--ease-premium);
 }
 .product-slide:not(.active) {
@@ -359,6 +359,5 @@ section { padding: 100px 0; position: relative; }
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
   .hero { padding-top: calc(var(--nav-height) + 20px); }
-  .product-media { height: 220px; }
   .advantage-card { padding: 24px 20px; }
 }
